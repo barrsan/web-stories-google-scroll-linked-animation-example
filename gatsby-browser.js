@@ -1,7 +1,16 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import React from 'react';
+import { RecoilRoot } from 'recoil';
+import './src/styles/global.css';
 
-// You can delete this file if you're not using it
+export const wrapRootElement = ({ element }) => {
+  return <RecoilRoot>{element}</RecoilRoot>;
+};
+
+export const onClientEntry = () => {
+  window.onload = () => {
+    setTimeout(() => {
+      window.localStorage.setItem('isLoadComplete', 'true');
+      window.dispatchEvent(new Event('storage'));
+    }, 1000);
+  };
+};

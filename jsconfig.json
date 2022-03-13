@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "noEmit": true,
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@constants": ["./src/constants"],
+      "@assets/*": ["./src/assets/*"],
+      "@content/*": ["./content/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

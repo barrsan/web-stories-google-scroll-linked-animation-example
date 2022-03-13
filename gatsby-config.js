@@ -1,38 +1,53 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: 'Web Stories Google Scrolling Example',
+    description: 'Web Stories Google scrolling example',
+    author: 'Alex Baretsky',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-react-css-modules',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        exclude: '/global/',
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-alias-imports',
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        alias: {
+          '@pages': 'src/pages',
+          '@constants': 'src/constants',
+          '@components': 'src/components',
+          '@hooks': 'src/hooks',
+          '@utils': 'src/utils',
+          '@assets': 'src/assets',
+          '@content': 'content',
+        },
+        extensions: ['js', 'jsx', 'yaml', 'mp4', 'png', 'jpg'],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'web-stories-google-example',
+        short_name: 'wsg-example',
+        start_url: '/',
+        background_color: '#ffffff',
+        display: 'minimal-ui',
+        icon: 'src/assets/images/gatsby-icon.png',
+      },
+    },
   ],
-}
+};

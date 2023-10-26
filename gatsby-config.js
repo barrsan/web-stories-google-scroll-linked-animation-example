@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'web-stories-google-example',
+        name: 'web-stories-google-scroll-linked-animation-example',
         short_name: 'wsg-example',
         start_url: '/',
         background_color: '#ffffff',

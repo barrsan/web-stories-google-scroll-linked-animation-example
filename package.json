@@ -1,7 +1,7 @@
 {
   "name": "web-stories-google-scroll-linked-animation-example",
   "private": true,
-  "description": "Web Stories Google scroll-linked animation example",
+  "description": "Web Stories Google Scroll-Linked Animation example",
   "version": "1.0.0",
   "author": "Alex Baretsky <41ax@mail.ru>",
   "dependencies": {

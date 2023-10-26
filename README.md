@@ -1,6 +1,6 @@
-# Web Stories Google Scrolling Example
+# Web Stories Google Scroll-Linked Animation example
 
-Web Stories Google scrolling example using:
+Using:
 - [react](https://reactjs.org/)
 - [framer-motion](https://www.framer.com/motion/)
 - [recoil](https://recoiljs.org/)
